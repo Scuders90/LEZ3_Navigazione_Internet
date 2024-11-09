@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Esercizio Navigazione Web - Simulatore Browser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="punteggio">Punteggio: <span id="score">0</span></div>
+
+    <div class="istruzioni">
+        <h2>Istruzioni:</h2>
+        <ol>
+            <li>Riconosci i siti sicuri: osserva il lucchetto e l'URL</li>
+            <li>Usa la barra degli indirizzi: cerca informazioni</li>
+            <li>Gestisci le schede: apri e chiudi correttamente</li>
+        </ol>
+    </div>
+
+    <div class="browser-simulator">
+        <div class="browser-toolbar">
+            <div class="nav-buttons">
+                <button id="back">←</button>
+                <button id="forward">→</button>
+                <button id="reload">↻</button>
+            </div>
+            <div class="address-bar">
+                <div class="security-indicator"></div>
+                <input type="text" id="url-input" placeholder="Scrivi un indirizzo web o cerca...">
+            </div>
+            <button id="new-tab">+</button>
+        </div>
+
+        <div class="tabs-bar">
+            <div class="tab active">Home</div>
+        </div>
+
+        <div class="browser-content">
+            <div id="scenario1" class="scenario active">
+                <h2>Verifica la Sicurezza</h2>
+                <div class="website-example">
+                    <div class="url-display">https://www.bancasicura.it</div>
+                    <div class="content">
+                        <h3>Accedi al tuo conto</h3>
+                        <p>Inserisci le tue credenziali per accedere</p>
+                        <button class="check-button">Verifica Sicurezza</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="scenario2" class="scenario">
+                <h2>Ricerca Informazioni</h2>
+                <div class="search-example">
+                    <input type="text" placeholder="Cerca informazioni...">
+                    <button class="search-button">Cerca</button>
+                    <div class="search-results"></div>
+                </div>
+            </div>
+
+            <div id="scenario3" class="scenario">
+                <h2>Gestione Schede</h2>
+                <div class="tabs-exercise">
+                    <button class="tab-action">Apri Nuova Scheda</button>
+                    <div class="tabs-display"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
