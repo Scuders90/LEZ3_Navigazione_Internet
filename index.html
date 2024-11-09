@@ -11,80 +11,33 @@
         <h2>Verifica la Sicurezza dei Siti Web</h2>
         <p>Per ogni sito web mostrato:</p>
         <ol>
-            <li>Osserva l'URL (deve iniziare con https://)</li>
-            <li>Controlla il lucchetto nella barra degli indirizzi</li>
-            <li>Indica se il sito è sicuro o non sicuro</li>
+            <li>Osserva l'URL nella barra degli indirizzi</li>
+            <li>Controlla la presenza del lucchetto</li>
+            <li>Analizza il contenuto del sito</li>
+            <li>Decidi se il sito è sicuro o non sicuro</li>
         </ol>
     </div>
 
+    <div class="level-selector">
+        <h3>Seleziona il Livello:</h3>
+        <button class="btn btn-level" onclick="cambiaLivello('base')">Base</button>
+        <button class="btn btn-level" onclick="cambiaLivello('intermedio')">Intermedio</button>
+        <button class="btn btn-level" onclick="cambiaLivello('avanzato')">Avanzato</button>
+        <button class="btn btn-level" onclick="cambiaLivello('esperto')">Esperto</button>
+    </div>
+
+    <div class="difficulty-info">
+        <h4>Livelli di Difficoltà:</h4>
+        <ul>
+            <li><strong>Base:</strong> Verifica https e lucchetto</li>
+            <li><strong>Intermedio:</strong> Controlla anche l'URL del sito</li>
+            <li><strong>Avanzato:</strong> Attenzione ai redirect e domini falsi</li>
+            <li><strong>Esperto:</strong> Analisi approfondita degli URL e dei redirect</li>
+        </ul>
+    </div>
+
     <div class="website-list">
-        <!-- Esempio 1: Sito bancario sicuro -->
-        <div class="website-box">
-            <div class="url-bar">
-                <span class="lock-icon">🔒</span>
-                <span>https://www.bancasicura.it</span>
-            </div>
-            <div class="content">
-                <h3>Accedi al tuo conto</h3>
-                <p>Inserisci le tue credenziali per accedere ai servizi bancari</p>
-            </div>
-            <div class="buttons">
-                <button class="btn btn-sicuro" onclick="verificaSicurezza(1, true)">Sicuro</button>
-                <button class="btn btn-non-sicuro" onclick="verificaSicurezza(1, false)">Non Sicuro</button>
-            </div>
-            <div id="feedback-1" class="feedback"></div>
-        </div>
-
-        <!-- Esempio 2: Sito non sicuro -->
-        <div class="website-box">
-            <div class="url-bar">
-                <span class="lock-icon">❌</span>
-                <span>http://www.super-offerta.net</span>
-            </div>
-            <div class="content">
-                <h3>VINCI SUBITO!</h3>
-                <p>Hai vinto 1.000.000€! Inserisci i tuoi dati per ricevere il premio.</p>
-            </div>
-            <div class="buttons">
-                <button class="btn btn-sicuro" onclick="verificaSicurezza(2, true)">Sicuro</button>
-                <button class="btn btn-non-sicuro" onclick="verificaSicurezza(2, false)">Non Sicuro</button>
-            </div>
-            <div id="feedback-2" class="feedback"></div>
-        </div>
-
-        <!-- Esempio 3: Sito governativo sicuro -->
-        <div class="website-box">
-            <div class="url-bar">
-                <span class="lock-icon">🔒</span>
-                <span>https://www.inps.it</span>
-            </div>
-            <div class="content">
-                <h3>Area Personale INPS</h3>
-                <p>Accedi con SPID per consultare la tua posizione</p>
-            </div>
-            <div class="buttons">
-                <button class="btn btn-sicuro" onclick="verificaSicurezza(3, true)">Sicuro</button>
-                <button class="btn btn-non-sicuro" onclick="verificaSicurezza(3, false)">Non Sicuro</button>
-            </div>
-            <div id="feedback-3" class="feedback"></div>
-        </div>
-
-        <!-- Esempio 4: Sito di phishing -->
-        <div class="website-box">
-            <div class="url-bar">
-                <span class="lock-icon">❌</span>
-                <span>http://poste-italiane.secure-login.com</span>
-            </div>
-            <div class="content">
-                <h3>Poste Italiane - Login</h3>
-                <p>Accedi al tuo conto PostePay</p>
-            </div>
-            <div class="buttons">
-                <button class="btn btn-sicuro" onclick="verificaSicurezza(4, true)">Sicuro</button>
-                <button class="btn btn-non-sicuro" onclick="verificaSicurezza(4, false)">Non Sicuro</button>
-            </div>
-            <div id="feedback-4" class="feedback"></div>
-        </div>
+        <!-- Gli scenari verranno inseriti qui dinamicamente -->
     </div>
 
     <script src="script.js"></script>
