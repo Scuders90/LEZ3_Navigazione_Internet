@@ -14,54 +14,111 @@ body {
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
+    font-weight: bold;
 }
 
-.istruzioni {
-    background-color: #fff;
+.istruzioni, .level-selector, .difficulty-info {
+    background-color: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.website-list {
-    margin: 20px 0;
+.level-selector {
+    text-align: center;
 }
 
-.website-box {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 15px;
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
-.url-bar {
-    background-color: #f8f9fa;
-    padding: 8px;
+.btn-level {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-level:hover {
+    background-color: #2980b9;
+}
+
+.btn-level.active {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.browser-window {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.browser-toolbar {
+    background-color: #f1f3f4;
+    padding: 10px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ddd;
+}
+
+.url-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 8px;
     border-radius: 4px;
 }
 
 .lock-icon {
     margin-right: 10px;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
+    font-size: 16px;
 }
 
-.content {
-    padding: 15px 0;
+.url-text {
+    color: #2c3e50;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.browser-content {
+    padding: 20px;
+}
+
+.site-content {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-sicuro {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-non-sicuro {
+    background-color: #e74c3c;
+    color: white;
 }
 
 .feedback {
     margin-top: 10px;
     padding: 10px;
-    display: none;
     border-radius: 5px;
+    display: none;
 }
 
 .feedback.correct {
@@ -74,29 +131,23 @@ body {
     color: #721c24;
 }
 
-.buttons {
-    margin-top: 10px;
+.url-warning {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
 }
 
-.btn {
-    padding: 8px 15px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s;
+.difficulty-info ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.btn:hover {
-    opacity: 0.9;
+.difficulty-info li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.btn-sicuro {
-    background-color: #2ecc71;
-    color: white;
-}
-
-.btn-non-sicuro {
-    background-color: #e74c3c;
-    color: white;
+.difficulty-info li:last-child {
+    border-bottom: none;
 }
