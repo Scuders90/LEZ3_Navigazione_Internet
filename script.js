@@ -53,14 +53,14 @@ const scenari = {
             explanation: "Attenzione! Sito di phishing che imita una banca"
         },
         {
-            id: 6,
-            url: "https://mail.google.com?redirect=mail.google.secure-login.com",
-            hasLock: true,
-            title: "Gmail Login",
-            content: "Accedi alla tua email",
-            isSecure: false,
-            explanation: "Attenzione al redirect sospetto nell'URL"
-        }
+           id: 6,
+           url: "https://mail.google.com?redirect=mail.google.secure-login.com",
+           hasLock: true,
+           title: "Gmail Login",
+           content: "Accedi alla tua email",
+           isSecure: false,
+           explanation: "Attenzione! Questo URL ti reindirizza a 'secure-login.com', non a Google. Il truffatore ha aggiunto 'google' come sottodominio per ingannare."
+         }
     ],
     esperto: [
         {
